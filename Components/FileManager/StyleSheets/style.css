@@ -1,0 +1,9 @@
+#FileManager{
+    background-color: lightblue;
+}
+.selected{
+    background-color: blueviolet;
+}
+figure{
+    width: 50px;
+}

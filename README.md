@@ -3,8 +3,8 @@
 It's a GUI-based file manager application, made for the web.
 
 In the lowest level, it uses a SPA-way of doing things. So,
-*No refresh
-*Use ajax to send and recieve data
+1. No refresh
+2. Use ajax to send and recieve data
 
 To add a new component:
 1. Create a folder of similar structure to Component/Sample

@@ -1,7 +1,24 @@
+<div id = "fileOperation">
+    <button id = "upDirectoryButton">Up</button>
+    <button id = "copyButton">Copy</button>
+    <button id = "cutButton">Cut</button>
+    <button id = "pasteButton">Paste</button>
+    <button id = "deleteButton">Delete</button>
+    <button id = "downloadButton">Download</button>
+    <button id = "addFolderButton">Add Folder</button>
+    <form id="renameForm" style="visibility: hidden">
+        <input type="text"/>Preserve extention
+        <input type="checkbox" checked>
+        <button type="submit">Rename</button>
+    </form>
+</div>
+
 <div id="fileDisplay"></div>
-<button id="1">root</button><button id="2">root/A B</button>
+
+<button id="1">Load root</button>
 <form id="fileForm" enctype="multipart/form-data">
     <input type="file" id="fileSource" multiple/><br/>
     <input type="submit" name="submit" value="Upload"/>
 </form>
 <ul id="uploadMessages"></ul>
+

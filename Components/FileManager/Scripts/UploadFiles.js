@@ -1,9 +1,3 @@
-let fsParameters={//This object CONTAINS ALL FILE SYSTEM CONFIGURATION AND GLOBAL variables
-    rootDir         :   "Files",
-    currentDir      :   "",
-    maxFileSize     :   1048576,
-    fileTree        :   {}
-};
 
 function ShowUploadMessage(message){
     let targetElement = document.getElementById("uploadMessages");
@@ -13,11 +7,13 @@ function ShowUploadMessage(message){
 }
 
 function UploadFiles(files, destinationPath){
+    //console.log(files);
+    //console.log(destinationPath);
     //Clear Upload Messages First
     document.getElementById("uploadMessages").innerHTML="";
     for(let i=0; i<files.length; i++){
         if(files[i].size>=fsParameters.maxFileSize){
-            console.log(files[i].name)
+            //console.log(files[i].name);
             ShowUploadMessage(files[i].name+": File too big.");
             continue;
         }
@@ -31,18 +27,10 @@ function UploadFiles(files, destinationPath){
         xhr.onload = function(){
             if(xhr.status==200){
                 ShowUploadMessage(this.responseText);
+                GetFiles();
             }else console.log("UploadFailed");
         }
         xhr.send(formData);
     }
 }
 
-document.getElementById("fileForm").addEventListener("submit", e=>{
-    e.preventDefault();
-    let files = document.getElementById("fileSource").files;
-    if(files.length==0){
-        ShowUploadMessage("No file Selected.");
-    }else{
-        UploadFiles(files,fsParameters.currentDir);
-    }
-});

@@ -7,3 +7,31 @@
 figure{
     width: 50px;
 }
+
+.fileDisplayIcon{
+    max-width: 80px;
+    max-height: 80px;
+}
+.fileDisplayCaption{
+    height: 15px;
+    width: 100%; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.fileDisplayFigure{
+    width: 100px;
+    height: 120px;
+    position: relative;
+    bottom: 16px;
+    right: 48px;
+}
+.fileDisplayButton{
+    width: 100px;
+    height: 120px;
+}
+#fileDisplay{
+    align-content: top;
+    overflow: scroll;
+    height: 300px;
+}
